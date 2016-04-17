@@ -5,4 +5,5 @@ package com.houserental.dao;
  */
 public class Dao {
     private int a;
+    private int b;
 }

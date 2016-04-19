@@ -21,8 +21,6 @@ public class Application {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new ClassPathResource("applicationContext.xml").getPath());
         LandlordRepo landlordRepo = context.getBean(LandlordRepo.class);
-        AddressRepo addressRepo = context.getBean(AddressRepo.class);
-        HouseInfoRepo houseInfoRepo = context.getBean(HouseInfoRepo.class);
 
 //        CounterService counterService = (CounterService) context.getBean(CounterService.class);
 
@@ -31,7 +29,6 @@ public class Application {
         landlordAchilles.setEmail("achilles@gmail.com");
 
         landlordRepo.save(landlordAchilles);
-
 
         Address address = new Address("1 Washington St.", "San Jose", "CA", "94539");
 
@@ -54,17 +51,6 @@ public class Application {
             e.printStackTrace();
         }
         house1.setPostingDate(date);
-        house1.setLandlord(landlordAchilles);
-
-
-
-
-
-        addressRepo.save(address);
-        houseInfoRepo.save(house1);
-
-
-
 
         Landlord retrieveLL = landlordRepo.searchByPhoneNum("111-111-1111");
 
@@ -74,8 +60,6 @@ public class Application {
 
         landlordRepo.save(retrieveLL);
 
-
         context.close();
-
     }
 }

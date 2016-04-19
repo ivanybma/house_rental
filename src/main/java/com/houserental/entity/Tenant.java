@@ -17,10 +17,11 @@ public class Tenant {
 
     private String name;
 
-    @DBRef(db = "review")
-    private List<Review> review;
+    private List<String> reviewIdList;
 
-    private List<String>  favoriteHouseId;
+    private List<Favorite> favoriteList;
+
+    private List<ReviewRef> reviewRefList;
 
     @PersistenceConstructor
     public Tenant(String name) {
@@ -44,19 +45,27 @@ public class Tenant {
         this.name = name;
     }
 
-    public List<Review> getReview() {
-        return review;
+    public List<String> getReviewIdList() {
+        return reviewIdList;
     }
 
-    public void setReview(List<Review> review) {
-        this.review = review;
+    public void setReviewIdList(List<String> reviewIdList) {
+        this.reviewIdList = reviewIdList;
     }
 
-    public List<String> getFavoriteHouseId() {
-        return favoriteHouseId;
+    public List<Favorite> getFavoriteList() {
+        return favoriteList;
     }
 
-    public void setFavoriteHouseId(List<String> favoriteHouseId) {
-        this.favoriteHouseId = favoriteHouseId;
+    public void setFavoriteList(List<Favorite> favoriteList) {
+        this.favoriteList = favoriteList;
+    }
+
+    public List<ReviewRef> getReviewRefList() {
+        return reviewRefList;
+    }
+
+    public void setReviewRefList(List<ReviewRef> reviewRefList) {
+        this.reviewRefList = reviewRefList;
     }
 }

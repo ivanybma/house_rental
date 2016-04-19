@@ -6,17 +6,15 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by cheyikung on 4/17/16.
  */
-@Document(collection = "houseinfo")
 public class HouseInfo {
 
-    @Id
     private String houseId;
 
-    @DBRef(db = "address")
     private Address address;
 
     private String propertyType;
@@ -29,8 +27,7 @@ public class HouseInfo {
 
     private double price;
 
-    @DBRef(db = "landlord")
-    private Landlord landlord;
+    private List<ReviewRef> reviewRefList;
 
     private String description;
 
@@ -40,7 +37,6 @@ public class HouseInfo {
 
     public HouseInfo() {}
 
-    @PersistenceConstructor
     public HouseInfo(Address address, String propertyType, int numOfBathroom, int numOfBedroom, double sqrtft, double price, String description, String status, Date postingDate) {
         super();
         this.address = address;
@@ -111,12 +107,12 @@ public class HouseInfo {
         this.price = price;
     }
 
-    public Landlord getLandlord() {
-        return landlord;
+    public List<ReviewRef> getReviewRefList() {
+        return reviewRefList;
     }
 
-    public void setLandlord(Landlord landlord) {
-        this.landlord = landlord;
+    public void setReviewRefList(List<ReviewRef> reviewRefList) {
+        this.reviewRefList = reviewRefList;
     }
 
     public String getDescription() {

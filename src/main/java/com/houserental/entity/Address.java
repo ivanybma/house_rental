@@ -1,14 +1,6 @@
 package com.houserental.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.PersistenceConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "address")
 public class Address {
-
-    @Id
-    private String addressId;
 
     private String address;
 
@@ -24,21 +16,11 @@ public class Address {
 
     public Address() {}
 
-    @PersistenceConstructor
     public Address(String address, String city, String state, String zipcode) {
-        super();
         this.address = address;
         this.city = city;
         this.state = state;
         this.zipcode = zipcode;
-    }
-
-    public String getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(String addressId) {
-        this.addressId = addressId;
     }
 
     public String getAddress() {
@@ -89,10 +71,8 @@ public class Address {
         this.longitude = longitude;
     }
 
-    @Override
     public String toString() {
         return "Address [address=" + address + ", city=" + city + ", state=" + state + ", zipcode=" + zipcode + "]";
     }
-
 
 }

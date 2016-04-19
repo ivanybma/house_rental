@@ -7,11 +7,13 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by cheyikung on 4/17/16.
  */
-public interface LandlordRepo extends CrudRepository<Landlord, String>
-{
+public interface LandlordRepo extends CrudRepository<Landlord, String>, LandlordRepoCustom {
 
     @Query("{'_id' : ?0}")
     public Landlord findById(String id);
+
+    @Query("{'landlordName' : ?0}")
+    public Landlord findByName(String landlordName);
 
     @Query("{'phoneNum' : ?0}")
     public Landlord searchByPhoneNum(String phoneNum);

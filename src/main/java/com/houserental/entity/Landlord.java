@@ -15,14 +15,11 @@ import java.util.List;
 @Document(collection = "landlord")
 public class Landlord {
 
-
-//    @Id
-//    private Long landlordId;
-
     @Id
     private String landlordId;
 
-    @DBRef(db = "houseinfo")
+    private String name;
+
     private List<HouseInfo> houseOwned =  new ArrayList<HouseInfo>();
 
     private String phoneNum;
@@ -40,16 +37,29 @@ public class Landlord {
     }
 
 
-    public String getId() {
+    public String getLandlordId() {
         return landlordId;
     }
 
-    public void setId(String landlordId) {
+    public void setLandlordId(String landlordId) {
         this.landlordId = landlordId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<HouseInfo> getHouseOwned() {
         return houseOwned;
+    }
+
+    public void addHouse(HouseInfo newHouse) {
+        newHouse.setHouseId(Integer.toString(houseOwned.size()));
+        houseOwned.add(newHouse);
     }
 
     public void setHouseOwned(List<HouseInfo> houseOwned) {
@@ -70,6 +80,10 @@ public class Landlord {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getNumOfHouses(){
+        return houseOwned.size();
     }
 
     @Override

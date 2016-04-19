@@ -14,14 +14,17 @@ public class Review {
     @Id
     private String reviewId;
 
-    @DBRef(db = "tenant")
-    private Tenant tenant;
+    private String landlordId;
+
+    private String tenantId;
 
     private Date date;
 
     private String rating;
 
     private String description;
+
+    public Review() {}
 
     public Review(Date date, String rating, String description) {
         super();
@@ -38,12 +41,20 @@ public class Review {
         this.reviewId = reviewId;
     }
 
-    public Tenant getTenant() {
-        return tenant;
+    public String getLandlordId() {
+        return landlordId;
     }
 
-    public void setTenant(Tenant tenant) {
-        this.tenant = tenant;
+    public void setLandlordId(String landlordId) {
+        this.landlordId = landlordId;
+    }
+
+    public String getTenantId() {
+        return tenantId;
+    }
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
     }
 
     public Date getDate() {

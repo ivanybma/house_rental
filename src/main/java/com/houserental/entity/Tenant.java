@@ -21,7 +21,7 @@ public class Tenant {
 
     private List<Favorite> favoriteList;
 
-    private List<ReviewRef> reviewRefList;
+    private List<String> reviewIds;
 
     @PersistenceConstructor
     public Tenant(String name) {
@@ -61,11 +61,15 @@ public class Tenant {
         this.favoriteList = favoriteList;
     }
 
-    public List<ReviewRef> getReviewRefList() {
-        return reviewRefList;
+    public List<String> getReviewRefList() {
+        return reviewIds;
     }
 
-    public void setReviewRefList(List<ReviewRef> reviewRefList) {
-        this.reviewRefList = reviewRefList;
+    public void setReviewRefList(List<String> reviewRefList) {
+        this.reviewIds = reviewIds;
+    }
+
+    public void addReviewId(String reviewId){
+        reviewIdList.add(reviewId);
     }
 }

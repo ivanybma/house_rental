@@ -10,17 +10,20 @@ public class Address {
 
     private String zipcode;
 
-    private double latitude;
+    private double lat;
 
-    private double longitude;
+    private double lng;
 
-    public Address() {}
+    public Address() {
+    }
 
     public Address(String address, String city, String state, String zipcode) {
+        super();
         this.address = address;
         this.city = city;
         this.state = state;
         this.zipcode = zipcode;
+        this.setLocation();
     }
 
     public String getAddress() {
@@ -56,23 +59,28 @@ public class Address {
     }
 
     public double getLatitude() {
-        return latitude;
+        return lat;
     }
 
     public void setLatitude(double latitude) {
-        this.latitude = latitude;
+        this.lat = latitude;
     }
 
     public double getLongitude() {
-        return longitude;
+        return lng;
     }
 
     public void setLongitude(double longitude) {
-        this.longitude = longitude;
+        this.lng = longitude;
     }
 
-    public String toString() {
-        return "Address [address=" + address + ", city=" + city + ", state=" + state + ", zipcode=" + zipcode + "]";
+    public void setLocation() {
+        if ((address.isEmpty() && city.isEmpty() && state.isEmpty() && zipcode.isEmpty()) == false) {
+            LongLatService longLatService = LongLatService.getInstance();
+            longLatService.setAddress(address + " " + ", " + city + " " + state + " " + zipcode);
+            this.lat = longLatService.getLat();
+            this.lng = longLatService.getLng();
+        }
     }
 
 }

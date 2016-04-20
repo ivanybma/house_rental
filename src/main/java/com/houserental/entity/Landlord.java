@@ -20,17 +20,17 @@ public class Landlord {
 
     private String name;
 
-    private List<HouseInfo> houseOwned =  new ArrayList<HouseInfo>();
+    private List<HouseInfo> houseOwned = new ArrayList<HouseInfo>();
 
     private String phoneNum;
 
     private String email;
 
-    public Landlord() {}
+    public Landlord() {
+    }
 
     @PersistenceConstructor
-    public Landlord(String phoneNum, String email)
-    {
+    public Landlord(String phoneNum, String email) {
         super();
         this.phoneNum = phoneNum;
         this.email = email;
@@ -55,6 +55,19 @@ public class Landlord {
 
     public List<HouseInfo> getHouseOwned() {
         return houseOwned;
+    }
+
+    public HouseInfo getHouseById(String houseId) {
+        for (HouseInfo house : houseOwned) {
+            if (house.getHouseId().endsWith(houseId)) {
+                return house;
+            }
+        }
+        return null;
+    }
+
+    public void setHouseById(String houseId, HouseInfo house){
+        houseOwned.set(Integer.parseInt(houseId), house);
     }
 
     public void addHouse(HouseInfo newHouse) {
@@ -82,12 +95,12 @@ public class Landlord {
         this.email = email;
     }
 
-    public int getNumOfHouses(){
+    public int getNumOfHouses() {
         return houseOwned.size();
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Landlord [landlordId= " + landlordId + ", phone number= " + phoneNum + ", email= " + email + ", houseOwned= " + houseOwned + "]";
     }
 }

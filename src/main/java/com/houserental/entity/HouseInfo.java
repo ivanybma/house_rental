@@ -15,6 +15,8 @@ public class HouseInfo {
 
     private String houseId;
 
+    private String landlordId;
+
     private Address address;
 
     private String propertyType;
@@ -27,17 +29,17 @@ public class HouseInfo {
 
     private double price;
 
-    private List<ReviewRef> reviewRefList;
+    private List<String> reviewIds;
 
     private String description;
 
     private String status;
 
-    private Date postingDate;
+    private String postingDate;
 
     public HouseInfo() {}
 
-    public HouseInfo(Address address, String propertyType, int numOfBathroom, int numOfBedroom, double sqrtft, double price, String description, String status, Date postingDate) {
+    public HouseInfo(Address address, String propertyType, int numOfBathroom, int numOfBedroom, double sqrtft, double price, String description, String status, String postingDate) {
         super();
         this.address = address;
         this.propertyType = propertyType;
@@ -50,13 +52,20 @@ public class HouseInfo {
         this.postingDate = postingDate;
     }
 
-
     public String getHouseId() {
         return houseId;
     }
 
     public void setHouseId(String houseId) {
         this.houseId = houseId;
+    }
+
+    public String getLandlordId() {
+        return landlordId;
+    }
+
+    public void setLandlordId(String landlordId) {
+        this.landlordId = landlordId;
     }
 
     public Address getAddress() {
@@ -107,12 +116,12 @@ public class HouseInfo {
         this.price = price;
     }
 
-    public List<ReviewRef> getReviewRefList() {
-        return reviewRefList;
+    public List<String> getReviewIds() {
+        return reviewIds;
     }
 
-    public void setReviewRefList(List<ReviewRef> reviewRefList) {
-        this.reviewRefList = reviewRefList;
+    public void setReviewRefList(List<String> reviewIds) {
+        this.reviewIds = reviewIds;
     }
 
     public String getDescription() {
@@ -131,11 +140,15 @@ public class HouseInfo {
         this.status = status;
     }
 
-    public Date getPostingDate() {
+    public String getPostingDate() {
         return postingDate;
     }
 
-    public void setPostingDate(Date postingDate) {
+    public void setPostingDate(String postingDate) {
         this.postingDate = postingDate;
+    }
+
+    public void addReviewId(String reviewId){
+        reviewIds.add(reviewId);
     }
 }

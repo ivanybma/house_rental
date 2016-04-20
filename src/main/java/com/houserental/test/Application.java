@@ -42,15 +42,7 @@ public class Application {
         house1.setPrice(1000.0d);
         house1.setDescription("house 1 owned by 111-111-1111");
         house1.setStatus("open");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        String dateInString = "2016-04-16 10:20:56";
-        Date date = null;
-        try {
-            date = sdf.parse(dateInString);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        house1.setPostingDate(date);
+        house1.setPostingDate("2016-04-16");
 
         Landlord retrieveLL = landlordRepo.searchByPhoneNum("111-111-1111");
 

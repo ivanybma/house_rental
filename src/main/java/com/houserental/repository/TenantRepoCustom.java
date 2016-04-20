@@ -6,5 +6,5 @@ import com.houserental.entity.Review;
  * Created by cheyikung on 4/19/16.
  */
 public interface TenantRepoCustom {
-    public String addReview(Review review);
+    public void addReview(String tenantName, String landlordName, String houseId, Review review);
 }

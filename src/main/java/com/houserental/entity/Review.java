@@ -1,6 +1,7 @@
 package com.houserental.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,9 +17,11 @@ public class Review {
 
     private String landlordId;
 
+    private String houseId;
+
     private String tenantId;
 
-    private Date date;
+    private String date;
 
     private String rating;
 
@@ -26,7 +29,8 @@ public class Review {
 
     public Review() {}
 
-    public Review(Date date, String rating, String description) {
+    @PersistenceConstructor
+    public Review(String date, String rating, String description) {
         super();
         this.date = date;
         this.rating = rating;
@@ -49,6 +53,14 @@ public class Review {
         this.landlordId = landlordId;
     }
 
+    public String getHouseId() {
+        return houseId;
+    }
+
+    public void setHouseId(String houseId) {
+        this.houseId = houseId;
+    }
+
     public String getTenantId() {
         return tenantId;
     }
@@ -57,11 +69,11 @@ public class Review {
         this.tenantId = tenantId;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

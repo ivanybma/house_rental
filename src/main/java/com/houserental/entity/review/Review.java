@@ -15,11 +15,11 @@ public class Review {
     @Id
     private String reviewId;
 
-    private String landlordId;
+    private String landlordName;
 
     private String houseId;
 
-    private String tenantId;
+    private String tenantName;
 
     private String date;
 
@@ -45,12 +45,12 @@ public class Review {
         this.reviewId = reviewId;
     }
 
-    public String getLandlordId() {
-        return landlordId;
+    public String getLandlordName() {
+        return landlordName;
     }
 
-    public void setLandlordId(String landlordId) {
-        this.landlordId = landlordId;
+    public void setLandlordName(String landlordName) {
+        this.landlordName = landlordName;
     }
 
     public String getHouseId() {
@@ -61,12 +61,12 @@ public class Review {
         this.houseId = houseId;
     }
 
-    public String getTenantId() {
-        return tenantId;
+    public String getTenantName() {
+        return tenantName;
     }
 
-    public void setTenantId(String tenantId) {
-        this.tenantId = tenantId;
+    public void setTenantName(String tenantName) {
+        this.tenantName = tenantName;
     }
 
     public String getDate() {

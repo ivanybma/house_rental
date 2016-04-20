@@ -15,6 +15,7 @@ public class Tenant {
     @Id
     private String tenantId;
 
+    //unique
     private String name;
 
     private List<String> reviewIdList;
@@ -59,6 +60,10 @@ public class Tenant {
 
     public void setFavoriteList(List<Favorite> favoriteList) {
         this.favoriteList = favoriteList;
+    }
+
+    public void addFavorite(Favorite favorite){
+        favoriteList.add(favorite);
     }
 
     public List<String> getReviewRefList() {

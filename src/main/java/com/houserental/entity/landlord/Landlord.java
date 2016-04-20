@@ -18,6 +18,7 @@ public class Landlord {
     @Id
     private String landlordId;
 
+    //unique
     private String name;
 
     private List<HouseInfo> houseOwned = new ArrayList<HouseInfo>();

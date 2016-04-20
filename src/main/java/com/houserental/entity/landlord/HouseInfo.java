@@ -15,7 +15,7 @@ public class HouseInfo {
 
     private String houseId;
 
-    private String landlordId;
+    private String landlordName;
 
     private Address address;
 
@@ -60,12 +60,12 @@ public class HouseInfo {
         this.houseId = houseId;
     }
 
-    public String getLandlordId() {
-        return landlordId;
+    public String getlandlordName() {
+        return landlordName;
     }
 
-    public void setLandlordId(String landlordId) {
-        this.landlordId = landlordId;
+    public void setlandlordName(String landlordName) {
+        this.landlordName = landlordName;
     }
 
     public Address getAddress() {

@@ -5,29 +5,29 @@ package com.houserental.entity.tenant;
  */
 public class Favorite {
 
-    private String landlordId;
-    private String houseInfoId;
+    private String landlordName;
+    private String houseId;
 
     public Favorite(){}
 
-    public Favorite(String landlordId, String houseInfoId) {
-        this.landlordId = landlordId;
-        this.houseInfoId = houseInfoId;
+    public Favorite(String landlordName, String houseId) {
+        this.landlordName = landlordName;
+        this.houseId = houseId;
     }
 
-    public String getHouseInfoId() {
-        return houseInfoId;
+    public String getHouseId() {
+        return houseId;
     }
 
-    public void setHouseInfoId(String houseInfoId) {
-        this.houseInfoId = houseInfoId;
+    public void setHouseId(String houseId) {
+        this.houseId = houseId;
     }
 
-    public String getLandlordId() {
-        return landlordId;
+    public String getLandlordName() {
+        return landlordName;
     }
 
-    public void setLandlordId(String landlordId) {
-        this.landlordId = landlordId;
+    public void setLandlordName(String landlordName) {
+        this.landlordName = landlordName;
     }
 }

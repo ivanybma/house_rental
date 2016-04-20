@@ -4,6 +4,8 @@ import com.houserental.entity.tenant.Tenant;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
+
 /**
  * Created by cheyikung on 4/17/16.
  */

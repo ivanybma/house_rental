@@ -1,4 +1,4 @@
-package com.houserental.repository;
+package com.houserental.repository.review;
 
 
 /**

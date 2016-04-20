@@ -1,6 +1,6 @@
-package com.houserental.repository;
+package com.houserental.repository.tenant;
 
-import com.houserental.entity.Review;
+import com.houserental.entity.review.Review;
 
 /**
  * Created by cheyikung on 4/19/16.

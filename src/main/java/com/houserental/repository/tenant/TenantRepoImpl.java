@@ -1,9 +1,11 @@
-package com.houserental.repository;
+package com.houserental.repository.tenant;
 
-import com.houserental.entity.HouseInfo;
-import com.houserental.entity.Landlord;
-import com.houserental.entity.Review;
-import com.houserental.entity.Tenant;
+import com.houserental.entity.landlord.HouseInfo;
+import com.houserental.entity.landlord.Landlord;
+import com.houserental.entity.review.Review;
+import com.houserental.entity.tenant.Tenant;
+import com.houserental.repository.landlord.LandlordRepo;
+import com.houserental.repository.review.ReviewRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**

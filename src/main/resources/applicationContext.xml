@@ -10,10 +10,10 @@
 
        <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
               <constructor-arg ref="mongo"/>
-              <constructor-arg name="databaseName" value="jcg"/>
+              <constructor-arg name="databaseName" value="house_rental"/>
        </bean>
 
-       <mongo:repositories base-package="com.houserental"></mongo:repositories>
+       <mongo:repositories base-package="com.houserental.repository"></mongo:repositories>
 
        <context:component-scan base-package="com.houserental.service"/>
 </beans>

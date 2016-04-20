@@ -1,4 +1,4 @@
-package com.houserental.entity;
+package com.houserental.entity.tenant;
 
 /**
  * Created by cheyikung on 4/19/16.

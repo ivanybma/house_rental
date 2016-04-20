@@ -1,6 +1,6 @@
-package com.houserental.repository;
+package com.houserental.repository.landlord;
 
-import com.houserental.entity.HouseInfo;
+import com.houserental.entity.landlord.HouseInfo;
 
 /**
  * Created by cheyikung on 4/19/16.

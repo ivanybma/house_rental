@@ -1,4 +1,4 @@
-package com.houserental.repository;
+package com.houserental.repository.review;
 
 /**
  * Created by cheyikung on 4/19/16.

@@ -1,4 +1,4 @@
-package com.houserental.entity;
+package com.houserental.entity.landlord;
 
 public class Address {
 

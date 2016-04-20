@@ -1,6 +1,6 @@
-package com.houserental.repository;
+package com.houserental.repository.landlord;
 
-import com.houserental.entity.Landlord;
+import com.houserental.entity.landlord.Landlord;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,4 +1,4 @@
-package com.houserental.entity;
+package com.houserental.entity.landlord;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.PersistenceConstructor;

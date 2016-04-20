@@ -1,6 +1,6 @@
-package com.houserental.repository;
+package com.houserental.repository.review;
 
-import com.houserental.entity.Review;
+import com.houserental.entity.review.Review;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

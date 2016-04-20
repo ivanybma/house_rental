@@ -1,9 +1,11 @@
 package com.houserental.test;
 
 
-import com.houserental.entity.*;
-import com.houserental.repository.*;
-import com.houserental.service.*;
+
+import com.houserental.entity.landlord.Address;
+import com.houserental.entity.landlord.HouseInfo;
+import com.houserental.entity.landlord.Landlord;
+import com.houserental.repository.landlord.LandlordRepo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
